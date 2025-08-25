@@ -9,9 +9,14 @@ def index():
     if request.method == "POST":
         cidade = request.form.get("cidade")
         if cidade:
-            clima = obter_clima(cidade)
+            dados_clima = obter_clima(cidade)
+            # Verifica se a chave 'erro' está no dicionário retornado
+            if "erro" in dados_clima:
+                clima = {"erro": dados_clima["erro"]}
+            else:
+                clima = dados_clima
     return render_template("index.html", clima=clima)
-
 
 if __name__ == "__main__":
     app.run(debug=True)
+    
