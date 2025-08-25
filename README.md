@@ -6,6 +6,5 @@ Você digita o nome da cidade e ele retorna a temperatura, umidade e clima atual
 ## Como usar
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/PedroGuerino-eng/weather-app.git
+   git clone https://github.com/PedroGuerino-eng/clima-facil.git
    cd weather-app
-
